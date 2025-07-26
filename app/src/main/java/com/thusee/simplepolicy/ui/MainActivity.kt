@@ -1,4 +1,4 @@
-package com.thusee.simplepolicy
+package com.thusee.simplepolicy.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,10 +10,13 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.thusee.simplepolicy.ui.navigation.BottomBarScreen
 import com.thusee.simplepolicy.ui.theme.SimplePolicyTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +36,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun SetBarColor(color: androidx.compose.ui.graphics.Color) {
+private fun SetBarColor(color: Color) {
     val systemUiController = rememberSystemUiController()
     SideEffect {
         systemUiController.setStatusBarColor(

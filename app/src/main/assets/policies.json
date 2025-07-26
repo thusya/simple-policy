@@ -1,0 +1,74 @@
+[
+  {
+    "policyId": "Policy 1",
+    "status": "Active",
+    "policyNumber": "ADG 278837988",
+    "nextPremiumDate": "12 Jan 2024",
+    "startDate": "01-Jan-2022",
+    "maturityDate": "01-Jan-2032",
+    "sumAssured": "$ 10,00,000",
+    "premiumFrequency": "Quarterly",
+    "lastPremiumPaidDate": "01-Jul-2025",
+    "nextPremiumAmount": "7,500"
+  },
+  {
+    "policyId": "Policy 2",
+    "status": "Lapsed",
+    "policyNumber": "ADG 278837988",
+    "nextPremiumDate": "12 Jan 2024",
+    "startDate": "15-Oct-2020",
+    "maturityDate": "15-Oct-2040",
+    "sumAssured": "$ 5,00,000",
+    "premiumFrequency": "Annually",
+    "lastPremiumPaidDate": "15-Oct-2024",
+    "nextPremiumAmount": "12,000"
+  },
+  {
+    "policyId": "Policy 3",
+    "status": "Active",
+    "policyNumber": "BFG 1122334455",
+    "nextPremiumDate": "15 Oct 2025",
+    "startDate": "15-Oct-2020",
+    "maturityDate": "15-Oct-2040",
+    "sumAssured": "$ 5,00,000",
+    "premiumFrequency": "Annually",
+    "lastPremiumPaidDate": "15-Oct-2024",
+    "nextPremiumAmount": "12,000"
+  },
+  {
+    "policyId": "Policy 4",
+    "status": "Lapsed",
+    "policyNumber": "CRD 3344556677",
+    "nextPremiumDate": "01 Jun 2023",
+    "startDate": "01-Jun-2019",
+    "maturityDate": "01-Jun-2034",
+    "sumAssured": "$ 8,00,000",
+    "premiumFrequency": "Half-Yearly",
+    "lastPremiumPaidDate": "01-Dec-2022",
+    "nextPremiumAmount": "9,500"
+  },
+  {
+    "policyId": "Policy 5",
+    "status": "Active",
+    "policyNumber": "EFG 9988776655",
+    "nextPremiumDate": "20 Sep 2025",
+    "startDate": "20-Sep-2021",
+    "maturityDate": "20-Sep-2036",
+    "sumAssured": "$ 7,50,000",
+    "premiumFrequency": "Monthly",
+    "lastPremiumPaidDate": "20-Jun-2025",
+    "nextPremiumAmount": "2,000"
+  },
+  {
+    "policyId": "Policy 6",
+    "status": "Lapsed",
+    "policyNumber": "XYZ 5566778899",
+    "nextPremiumDate": "05 Nov 2023",
+    "startDate": "05-Nov-2017",
+    "maturityDate": "05-Nov-2032",
+    "sumAssured": "$ 6,00,000",
+    "premiumFrequency": "Quarterly",
+    "lastPremiumPaidDate": "05-May-2023",
+    "nextPremiumAmount": "6,500"
+  }
+]

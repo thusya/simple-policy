@@ -21,10 +21,10 @@ fun BottomNavGraph(
     NavHost(
         navController = navController,
         route = BOTTOM_BAR,
-        startDestination = BottomBarNavItems.Policies.route
+        startDestination = BottomBarNavItems.Home.route
     ) {
         composable(
-            route = BottomBarNavItems.Policies.route,
+            route = BottomBarNavItems.Home.route,
             enterTransition = AnimationConfig.enterTransitionDefault,
             exitTransition = AnimationConfig.exitTransitionDefault,
         ) {

@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.devtools.ksp)
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kotlin.serializer)
 }
 
 android {
@@ -55,6 +56,7 @@ dependencies {
 
     implementation(libs.jakewharton.timber)
     implementation(libs.accompanist.systemuicontroller)
+    implementation(libs.kotlinx.serialization)
 
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
