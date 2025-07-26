@@ -5,12 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.thusee.simplepolicy.ui.navigation.BottomBarScreen
 import com.thusee.simplepolicy.ui.theme.SimplePolicyTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,11 +20,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SimplePolicyTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                SetBarColor(color = MaterialTheme.colorScheme.background)
+
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                ) {
+                    BottomBarScreen()
                 }
             }
         }
@@ -31,17 +33,11 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SimplePolicyTheme {
-        Greeting("Android")
+private fun SetBarColor(color: androidx.compose.ui.graphics.Color) {
+    val systemUiController = rememberSystemUiController()
+    SideEffect {
+        systemUiController.setStatusBarColor(
+            color = color
+        )
     }
 }

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">SimplePolicy</string>
+
+    <string name="home_screen_name">Home</string>
+    <string name="policies_screen_name">Policies</string>
+    <string name="claims_screen_name">Claims</string>
+    <string name="profile_screen_name">Profile</string>
 </resources>
