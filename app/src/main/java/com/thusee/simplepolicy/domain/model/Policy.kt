@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Policy(
     val policyId: String,
-    val status: PolicyStatus,
+    val status: String,
     val policyNumber: String,
     val nextPremiumDate: String,
     val startDate: String? = null,
@@ -15,7 +15,3 @@ data class Policy(
     val lastPremiumPaidDate: String? = null,
     val nextPremiumAmount: String? = null,
 )
-
-enum class PolicyStatus {
-    Active, Lapsed
-}
