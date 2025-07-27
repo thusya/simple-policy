@@ -109,7 +109,7 @@ fun PolicyCardItem(
             .padding(16.dp),
         shape = RoundedCornerShape(24.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.background),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(
@@ -149,7 +149,7 @@ fun PolicyCardItem(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(Color(0xFFF8F8FB)),
+                    .background(MaterialTheme.colorScheme.inverseOnSurface),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 InfoColumn(
@@ -170,7 +170,7 @@ fun PolicyCardItem(
                 enter = fadeIn() + expandVertically(),
                 exit = fadeOut() + shrinkVertically()
             ) {
-                Spacer(modifier = Modifier.padding(vertical = MaterialTheme.spacing.small))
+                Spacer(modifier = Modifier.padding(vertical = MaterialTheme.spacing.extraSmall))
             }
 
             ExpandedViewItem(
@@ -249,7 +249,12 @@ fun ExpandedViewItem(
             ),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Row(Modifier.fillMaxWidth()) {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(MaterialTheme.colorScheme.inverseOnSurface)
+            ) {
                 InfoColumn(
                     modifier = Modifier.weight(1f),
                     label = "Start Date",
@@ -261,8 +266,12 @@ fun ExpandedViewItem(
                     value = policy.maturityDate ?: "-"
                 )
             }
-            Spacer(modifier = Modifier.height(4.dp))
-            Row(Modifier.fillMaxWidth()) {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(MaterialTheme.colorScheme.inverseOnSurface)
+            ) {
                 InfoColumn(
                     modifier = Modifier.weight(1f),
                     label = "Sum Assured",
@@ -274,8 +283,12 @@ fun ExpandedViewItem(
                     value = policy.premiumFrequency ?: "-"
                 )
             }
-            Spacer(modifier = Modifier.height(4.dp))
-            Row(Modifier.fillMaxWidth()) {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(MaterialTheme.colorScheme.inverseOnSurface)
+            ) {
                 InfoColumn(
                     modifier = Modifier.weight(1f),
                     label = "Last Premium Paid",
@@ -296,8 +309,9 @@ private fun InfoColumn(
     modifier: Modifier = Modifier,
     label: String, value: String
 ) {
-    Column(modifier = modifier.padding(end = 8.dp)) {
+    Column(modifier = modifier.padding(12.dp)) {
         Text(text = label, style = typography.bodySmall.copy(color = Color.Gray))
+        Spacer(Modifier.height(4.dp))
         Text(
             text = value,
             style = typography.bodyMedium.copy(fontWeight = FontWeight.Bold)
