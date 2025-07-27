@@ -1,4 +1,4 @@
-package com.thusee.simplepolicy.ui.home
+package com.thusee.simplepolicy.ui.policies
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewmodel @Inject constructor(
+class PoliciesViewmodel @Inject constructor(
     private val getPoliciesUseCase: GetPoliciesUseCase,
 ) : ViewModel() {
 

@@ -10,8 +10,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.thusee.simplepolicy.constants.AnimationConfig
+import com.thusee.simplepolicy.ui.claims.ClaimScreen
 import com.thusee.simplepolicy.ui.home.HomeScreen
+import com.thusee.simplepolicy.ui.policies.PoliciesScreen
 import com.thusee.simplepolicy.ui.navigation.Graph.BOTTOM_BAR
+import com.thusee.simplepolicy.ui.profile.ProfileScreen
 
 @Composable
 fun BottomNavGraph(
@@ -21,15 +24,15 @@ fun BottomNavGraph(
     NavHost(
         navController = navController,
         route = BOTTOM_BAR,
-        startDestination = BottomBarNavItems.Home.route
+        startDestination = BottomBarNavItems.Policies.route
     ) {
         composable(
-            route = BottomBarNavItems.Home.route,
+            route = BottomBarNavItems.Policies.route,
             enterTransition = AnimationConfig.enterTransitionDefault,
             exitTransition = AnimationConfig.exitTransitionDefault,
         ) {
             Box(modifier = Modifier.padding(paddingValues)) {
-                HomeScreen(navController = navController)
+                PoliciesScreen()
             }
         }
         composable(
@@ -38,7 +41,7 @@ fun BottomNavGraph(
             exitTransition = AnimationConfig.exitTransitionDefault,
         ) {
             Box(modifier = Modifier.padding(paddingValues)) {
-                HomeScreen(navController = navController)
+                HomeScreen()
             }
         }
         composable(
@@ -47,7 +50,7 @@ fun BottomNavGraph(
             exitTransition = AnimationConfig.exitTransitionDefault,
         ) {
             Box(modifier = Modifier.padding(paddingValues)) {
-                HomeScreen(navController = navController)
+                ClaimScreen()
             }
         }
 
@@ -57,7 +60,7 @@ fun BottomNavGraph(
             exitTransition = AnimationConfig.exitTransitionDefault,
         ) {
             Box(modifier = Modifier.padding(paddingValues)) {
-                HomeScreen(navController = navController)
+                ProfileScreen()
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.thusee.simplepolicy.ui.home
+package com.thusee.simplepolicy.ui.profile
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,7 +14,7 @@ import com.thusee.simplepolicy.R
 import com.thusee.simplepolicy.ui.components.CustomToolbar
 
 @Composable
-fun HomeScreen(
+fun ProfileScreen(
     modifier: Modifier = Modifier,
     showBackButton: Boolean = false,
     onBack: () -> Unit = {}
@@ -23,7 +23,7 @@ fun HomeScreen(
         topBar = {
             CustomToolbar(
                 modifier = Modifier,
-                title = stringResource(R.string.home_screen_name),
+                title = stringResource(R.string.profile_screen_name),
                 showBackButton = showBackButton,
                 onBack = onBack
             )
@@ -36,7 +36,7 @@ fun HomeScreen(
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = stringResource(R.string.home_screen_name),
+                text = stringResource(R.string.profile_screen_name),
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onBackground
             )

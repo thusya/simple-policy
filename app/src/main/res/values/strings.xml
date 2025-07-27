@@ -5,4 +5,5 @@
     <string name="policies_screen_name">Policies</string>
     <string name="claims_screen_name">Claims</string>
     <string name="profile_screen_name">Profile</string>
+    <string name="cont_desc_back_arrow">back arrow</string>
 </resources>
