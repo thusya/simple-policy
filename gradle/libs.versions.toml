@@ -16,7 +16,6 @@ hilt-navigation-compose = "1.2.0"
 kotlinx-coroutines-test = "1.10.2"
 mockk = "1.14.5"
 junit-jupiter = "5.13.4"
-accompanist-systemuicontroller = "0.36.0"
 kotlinxSerialization = "1.9.0"
 androidbrowserhelper = "2.6.2"
 
@@ -43,7 +42,6 @@ hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-comp
 kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
 jakewharton-timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
-accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanist-systemuicontroller" }
 androidbrowserhelper = { group = "com.google.androidbrowserhelper", name = "androidbrowserhelper", version.ref = "androidbrowserhelper" }
 
 junit-jupiter-api = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit-jupiter" }

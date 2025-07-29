@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -34,8 +36,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
+
+    kotlin {
+        compilerOptions {
+            jvmTarget = JvmTarget.JVM_17
+        }
     }
     buildFeatures {
         compose = true
@@ -56,7 +61,6 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
 
     implementation(libs.jakewharton.timber)
-    implementation(libs.accompanist.systemuicontroller)
     implementation(libs.kotlinx.serialization)
     implementation(libs.androidbrowserhelper)
 

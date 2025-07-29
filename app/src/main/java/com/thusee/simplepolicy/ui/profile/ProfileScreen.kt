@@ -63,7 +63,7 @@ fun ProfileScreen(
                 .verticalScroll(rememberScrollState())
                 .fillMaxSize()
         ) {
-            SettingHeaderItem(stringResource(id = R.string.settings_general).uppercase())
+            SettingHeaderItem(stringResource(id = R.string.settings_general))
             Spacer(modifier = Modifier.height(MaterialTheme.spacing.spacing12))
             SettingItemWithToggle(
                 title = stringResource(id = R.string.setting_notification),
@@ -102,8 +102,8 @@ fun SettingHeaderItem(
     Text(
         text = title,
         style = TextStyle(
-            fontSize = 21.sp,
-            lineHeight = 28.sp,
+            fontSize = 16.sp,
+            lineHeight = 24.sp,
             letterSpacing = 0.sp,
             fontWeight = FontWeight.Medium,
             color = MaterialTheme.colorScheme.onBackground
