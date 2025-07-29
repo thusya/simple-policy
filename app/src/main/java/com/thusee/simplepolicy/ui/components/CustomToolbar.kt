@@ -9,11 +9,14 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.thusee.simplepolicy.R
 
@@ -26,13 +29,20 @@ fun CustomToolbar(
     onBack: () -> Unit = {}
 ) {
     TopAppBar(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier.fillMaxWidth()
+            .shadow(4.dp),
+        colors = TopAppBarDefaults.mediumTopAppBarColors(
+            containerColor = MaterialTheme.colorScheme.background,
+            titleContentColor = MaterialTheme.colorScheme.background,
+            navigationIconContentColor = MaterialTheme.colorScheme.background
+        ),
         title = {
             Text(
                 text = title,
-                fontSize = 20.sp,
+                fontSize = 24.sp,
                 color = MaterialTheme.colorScheme.onBackground,
-                fontWeight = FontWeight.Normal,
+                fontWeight = FontWeight.Bold,
+                lineHeight = 32.sp,
             )
         },
         navigationIcon = {

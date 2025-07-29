@@ -81,7 +81,8 @@ fun PoliciesScreen(
                     )
                 }
             ) { paddingValues ->
-                LazyColumn(Modifier.padding(paddingValues)) {
+                LazyColumn(Modifier.padding(paddingValues)
+                    .padding(bottom = 90.dp)) {
                     items(state.data) {
                         PolicyCardItem(policy = it)
                     }
@@ -106,12 +107,16 @@ fun PolicyCardItem(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(vertical = 6.dp)
+            .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(24.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.background),
-        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.5.dp)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier
+            .padding(horizontal = 16.dp)
+            .padding(vertical = 8.dp)
+        ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
@@ -119,15 +124,21 @@ fun PolicyCardItem(
                 Text(
                     text = policy.policyId,
                     style = typography.titleMedium,
-                    color = Color(0xFF002C5F),
+                    color = MaterialTheme.colorScheme.onBackground,
                     fontWeight = FontWeight.Bold
                 )
+
+                val color = if (policy.status == "Active") {
+                    MaterialTheme.colorScheme.outlineVariant
+                } else {
+                    MaterialTheme.colorScheme.outline
+                }
 
                 Box(
                     modifier = Modifier
                         .border(
                             width = 1.dp,
-                            color = Color(0xFF139B59),
+                            color = color,
                             shape = RoundedCornerShape(6.dp)
                         )
                         .background(Color.Transparent, shape = RoundedCornerShape(6.dp))
@@ -135,7 +146,7 @@ fun PolicyCardItem(
                 ) {
                     Text(
                         text = policy.status,
-                        color = Color(0xFF139B59),
+                        color = color,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
                         style = typography.bodyMedium
@@ -149,7 +160,7 @@ fun PolicyCardItem(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(MaterialTheme.colorScheme.inverseOnSurface),
+                    .background(MaterialTheme.colorScheme.inverseSurface),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 InfoColumn(
@@ -183,17 +194,20 @@ fun PolicyCardItem(
             OutlinedButton(
                 onClick = { isExpanded = !isExpanded },
                 shape = RoundedCornerShape(12.dp),
-                border = BorderStroke(1.dp, Color(0xFF002C5F)),
+                border = BorderStroke(
+                    width = 1.dp,
+                    color = MaterialTheme.colorScheme.onPrimary
+                ),
                 modifier = Modifier.align(Alignment.CenterHorizontally)
             ) {
                 Text(
                     text = if (isExpanded) "Show Less" else "Read More",
-                    color = Color(0xFF002C5F)
+                    color = MaterialTheme.colorScheme.onPrimary
                 )
                 Icon(
                     imageVector = if (isExpanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
                     contentDescription = null,
-                    tint = Color(0xFF002C5F),
+                    tint = MaterialTheme.colorScheme.onPrimary,
                 )
             }
         }
@@ -253,7 +267,7 @@ fun ExpandedViewItem(
                 Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(MaterialTheme.colorScheme.inverseOnSurface)
+                    .background(MaterialTheme.colorScheme.inverseSurface)
             ) {
                 InfoColumn(
                     modifier = Modifier.weight(1f),
@@ -270,7 +284,7 @@ fun ExpandedViewItem(
                 Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(MaterialTheme.colorScheme.inverseOnSurface)
+                    .background(MaterialTheme.colorScheme.inverseSurface)
             ) {
                 InfoColumn(
                     modifier = Modifier.weight(1f),
@@ -287,7 +301,7 @@ fun ExpandedViewItem(
                 Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(12.dp))
-                    .background(MaterialTheme.colorScheme.inverseOnSurface)
+                    .background(MaterialTheme.colorScheme.inverseSurface)
             ) {
                 InfoColumn(
                     modifier = Modifier.weight(1f),
@@ -314,7 +328,9 @@ private fun InfoColumn(
         Spacer(Modifier.height(4.dp))
         Text(
             text = value,
-            style = typography.bodyMedium.copy(fontWeight = FontWeight.Bold)
+            style = typography.bodyMedium,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onBackground
         )
     }
 }
