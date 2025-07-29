@@ -121,7 +121,7 @@ fun SettingItemWithArrow(
             .fillMaxWidth()
             .clickable { onClick() }
             .background(
-                color = MaterialTheme.colorScheme.inverseSurface,
+                color = MaterialTheme.colorScheme.tertiaryContainer,
                 shape = MaterialTheme.shapes.extraLarge,
             ),
         verticalAlignment = Alignment.CenterVertically,
@@ -165,7 +165,7 @@ fun SettingItemWithText(
         modifier = Modifier
             .fillMaxWidth()
             .background(
-                color = MaterialTheme.colorScheme.inverseSurface,
+                color = MaterialTheme.colorScheme.tertiaryContainer,
                 shape = MaterialTheme.shapes.extraLarge,
             ),
         verticalAlignment = Alignment.CenterVertically,
@@ -215,7 +215,7 @@ fun SettingItemWithToggle(
         modifier = Modifier
             .fillMaxWidth()
             .background(
-                color = MaterialTheme.colorScheme.inverseSurface,
+                color = MaterialTheme.colorScheme.tertiaryContainer,
                 shape = MaterialTheme.shapes.extraLarge,
             ),
         verticalAlignment = Alignment.CenterVertically,
