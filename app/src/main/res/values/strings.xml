@@ -6,4 +6,13 @@
     <string name="claims_screen_name">Claims</string>
     <string name="profile_screen_name">Profile</string>
     <string name="cont_desc_back_arrow">back arrow</string>
+
+    <string name="choose_your_browser">Choose browser</string>
+    <string name="no_browser_found">Browser not installed</string>
+    <string name="settings_general">General</string>
+    <string name="setting_notification">Notification</string>
+    <string name="settings_privacy_policy">Privacy policy</string>
+    <string name="setting_linked_in">LinkedIn</string>
+    <string name="setting_github">GitHub</string>
+    <string name="settings_app_version">App Version</string>
 </resources>

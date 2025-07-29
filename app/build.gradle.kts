@@ -39,6 +39,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -57,6 +58,7 @@ dependencies {
     implementation(libs.jakewharton.timber)
     implementation(libs.accompanist.systemuicontroller)
     implementation(libs.kotlinx.serialization)
+    implementation(libs.androidbrowserhelper)
 
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
