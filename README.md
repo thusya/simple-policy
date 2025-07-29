@@ -15,6 +15,9 @@
 - [MockK](https://mockk.io/)
 - JUnit5 for unit testing
 
+### Figma Design : 
+<img width="896" height="544" alt="Screenshot 2025-07-29 at 22 21 16" src="https://github.com/user-attachments/assets/6f658086-907a-462a-8be2-8ec8f173a61f" />
+
 
 ### Demo : 
 ![Screen recording](https://github.com/user-attachments/assets/e89e614e-8a56-4b45-b4c6-b7745984dbe7)
